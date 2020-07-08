@@ -40,7 +40,7 @@ app.put('/image',(req,res)=>{ image.ImageHandler(req,res,db) } )
 app.post('/image',(req,res)=>{ image.ApiCallHandler(req,res) } )
 
 app.listen(process.env.PORT || 3000,()=>{
-    console.log(`App is running on port ${process.env.port}`); 
+    console.log(`App is running on port ${process.env.PORT}`); 
 })
 
 /*
