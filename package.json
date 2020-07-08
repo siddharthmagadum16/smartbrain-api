@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "start:dev": "node server.js"
+    "start:dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
