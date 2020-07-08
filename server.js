@@ -39,8 +39,8 @@ app.get('/profile/:id',(req,res)=>{ profiles.ProfileHandlerget(req,res,db) })
 app.put('/image',(req,res)=>{ image.ImageHandler(req,res,db) } )
 app.post('/image',(req,res)=>{ image.ApiCallHandler(req,res) } )
 
-app.listen(3000,()=>{
-    console.log("hi"); 
+app.listen(process.env.PORT || 3000,()=>{
+    console.log(`App is running on port ${process.env.port}`); 
 })
 
 /*
