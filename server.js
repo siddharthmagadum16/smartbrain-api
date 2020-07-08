@@ -27,7 +27,7 @@ app.use(express.json()); // REMEMBER that the  these 2 lines should be below dat
 app.use(cors()) 
 
 app.get('/',(req,res)=>{
-    res.send(database.users);
+    res.send("it is working ");
 })
 
 app.post('/signin', signin.SigninHandler(db,bcrypt)) //(req,res)=> { signin.SigninHandler(req,res,db,bcrypt) })
