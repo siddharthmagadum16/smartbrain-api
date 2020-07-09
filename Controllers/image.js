@@ -20,7 +20,7 @@ const ImageHandler =(req,res,db)=>{
         .increment('entries',1)
         .returning('entries')
         .then(entries=> res.json(entries[0]))
-        .catch(err=> res.json("unable to get entries"))
+        .catch(err=> res.json(`unable to get entries:${err}`))
 }
 
 module.exports={
