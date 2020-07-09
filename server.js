@@ -9,7 +9,7 @@ const register=require('./Controllers/register');
 const signin=require('./Controllers/signin');
 const profile=require('./Controllers/profile');
 const image=require('./Controllers/image');
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db= knex({
     client: 'pg',
