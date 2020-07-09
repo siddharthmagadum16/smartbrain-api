@@ -13,10 +13,10 @@ const image=require('./Controllers/image');
 const db= knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      user : 'postgres',
-      password : 'arijitsing',
-      database : 'smartbrain'
+      connectString : 'postgresql-infinite-09587',
+    //   user : 'postgres',
+    //   password : 'arijitsing',
+    //   database : 'smartbrain'
     }
 });
 
@@ -24,7 +24,7 @@ const db= knex({
 
 
 app.use(express.json()); // REMEMBER that the  these 2 lines should be below database atherwise the program dosen't find and server on this host
-app.use(cors()) 
+app.use(cors())
 
 app.get('/',(req,res)=>{
     res.send("it is working ");
@@ -40,7 +40,7 @@ app.put('/image',(req,res)=>{ image.ImageHandler(req,res,db) } )
 app.post('/image',(req,res)=>{ image.ApiCallHandler(req,res) } )
 
 app.listen(process.env.PORT || 3000,()=>{
-    console.log(`App is running on port ${process.env.PORT}`); 
+    console.log(`App is running on port ${process.env.PORT}`);
 })
 
 /*
