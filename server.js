@@ -9,15 +9,16 @@ const register=require('./Controllers/register');
 const signin=require('./Controllers/signin');
 const profile=require('./Controllers/profile');
 const image=require('./Controllers/image');
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db= knex({
     client: 'pg',
     connection: {
-      connectString : process.env.DATABASE_URL,
-      ssl:{
-          rejectUnauthorized:false,
-      },
+      connectionString : process.env.DATABASE_URL,
+      ssl:true
+    //   {
+    //     rejectUnauthorized:false,
+    // },
     //   user : 'postgres',
     //   password : 'arijitsing',
     //   database : 'smartbrain'
